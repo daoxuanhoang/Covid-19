@@ -1,4 +1,4 @@
-import Spinner from "components/Spinner";
+import Spinner from "../Spinner/index";
 import Image from "next/image";
 import React from "react";
 import * as APICountries from "../../apis/country/index";
