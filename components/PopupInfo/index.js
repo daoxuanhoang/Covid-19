@@ -64,14 +64,20 @@ const PopUpInfo = ({ data, setIsOpen }) => {
                 </h2>
                 <div className="col">
                   <div className="row mB8">
-                    <text className="fw600 mR8"> Thủ đô:</text>
-                    {detailData[0]?.capital?.map((i, idx) => {
-                      return (
-                        <text className="fw600" key={idx}>
-                          {i}
-                        </text>
-                      );
-                    })}
+                    <text
+                      className="fw600 mR8"
+                      style={{ whiteSpace: "nowrap" }}
+                    >
+                      {" "}
+                      Thủ đô:
+                    </text>
+                    <text className="fw600 tAs">
+                      {detailData[0]?.capital
+                        ?.map((i, idx) => {
+                          return i;
+                        })
+                        .join(", ")}
+                    </text>
                   </div>
                   <div className="row mB8">
                     <text className="fw600 mR8 "> Vùng:</text>
