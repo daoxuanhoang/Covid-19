@@ -1,6 +1,5 @@
 import React from "react";
 import * as APICountries from "../../apis/country";
-import Spinner from "../spinner";
 
 const StatisticWorld = () => {
   const [data, setData] = React.useState({});

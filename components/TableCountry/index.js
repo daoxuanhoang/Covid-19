@@ -1,8 +1,8 @@
-import { useWindowDimensions } from "constants/helpers";
+import { useWindowDimensions } from "../../constants/helpers";
 import React, { useRef } from "react";
 import ReactPaginate from "react-paginate";
 import PopupInfo from "../PopupInfo";
-import Spinner from "../spinner";
+import Spinner from "../Spinner/index";
 import * as APICountries from "./../../apis/country";
 
 const TableCountries = () => {
