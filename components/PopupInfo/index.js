@@ -51,7 +51,7 @@ const PopUpInfo = ({ data, setIsOpen }) => {
           {detailData?.length > 0 && (
             <div className="modalContent">
               <div className="mR16">
-                <Image
+                <img
                   width="190px"
                   height="100px"
                   style={{ border: "1px solid #D9D9D9" }}
