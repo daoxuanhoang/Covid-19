@@ -1,9 +1,12 @@
+@import url("./spinner.css");
+@import url("./popup.css");
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -98,6 +101,189 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+.pd8 {
+  padding: 8px;
+}
+.mB8 {
+  margin-bottom: 8px;
+}
+.mB16 {
+  margin-bottom: 16px;
+}
+.mB32 {
+  margin-bottom: 32px;
+}
+.mR8 {
+  margin-right: 8px;
+}
+.mR16 {
+  margin-right: 16px;
+}
+
+.tAs {
+  text-align: start;
+}
+.tAc {
+  text-align: center;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+.fs26 {
+  font-size: 26px;
+}
+
+/* pagination -- start */
+.pagination,
+.pagination_contests {
+  display: flex;
+  justify-content: center;
+}
+.pagination li,
+.pagination_contests li {
+  display: inline;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination_contests > li:first-child > a,
+.pagination_contests > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.pagination a,
+.pagination_contests a {
+  padding: 4px 10px;
+}
+.pagination > .active,
+.pagination_contests > .active {
+  position: relative;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #00bfff;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+  margin-right: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination_contests > li > a,
+.pagination_contests > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #424242;
+  font-weight: 700;
+  line-height: 18px;
+  font-style: normal;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+  background: #ffffff;
+  margin-right: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  z-index: 3;
+  color: #fff;
+  background-color: #00bfff;
+  border-color: #00bfff;
+  cursor: default;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination_contests > .active > a,
+.pagination_contests > .active > a:focus,
+.pagination_contests > .active > a:hover,
+.pagination_contests > .active > span,
+.pagination_contests > .active > span:focus,
+.pagination_contests > .active > span:hover {
+  z-index: 3;
+  color: #fff;
+  background-color: #2196f3;
+  border-color: #2196f3;
+  cursor: default;
+}
+/* pagination -- end */
+
+.card {
+  border: 1px solid #5f6368;
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.borB {
+  border-bottom: 1px solid #5f6368;
+}
+
+.tableRow:hover {
+  background-color: #00bfff;
+}
+.tableRow:hover .sticky-col {
+  background-color: #00bfff;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.sticky-col {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: black;
+}
+
+.first-col {
+  width: 150px;
+  left: 0px;
+}
+
+.textDecoration {
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {
