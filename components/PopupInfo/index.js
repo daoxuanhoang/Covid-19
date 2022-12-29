@@ -1,4 +1,5 @@
 import Spinner from "components/Spinner";
+import Image from "next/image";
 import React from "react";
 import * as APICountries from "../../apis/country/index";
 
@@ -7,16 +8,16 @@ const PopUpInfo = ({ data, setIsOpen }) => {
   const [isLoading, setIsLoading] = React.useState();
 
   React.useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       fetchData();
-    }, 3000);
+    }, 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   const fetchData = async () => {
     try {
       setIsLoading(true);
       const res = await APICountries.getDetailByCountryCode(data?.CountryCode);
-      console.log(res);
       setDetailData(res);
       setIsLoading(false);
     } catch (error) {
@@ -50,7 +51,7 @@ const PopUpInfo = ({ data, setIsOpen }) => {
           {detailData?.length > 0 && (
             <div className="modalContent">
               <div className="mR16">
-                <img
+                <Image
                   width="190px"
                   height="100px"
                   style={{ border: "1px solid #D9D9D9" }}
